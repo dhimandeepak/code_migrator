@@ -18,6 +18,15 @@ Settings.callback_manager = CallbackManager([langfuse_callback_handler])
 
 client = openai.AsyncClient()
 
+# Load documents from a directory (you can change this path as needed)
+documents = SimpleDirectoryReader("data").load_data()
+
+# Create an index from the documents
+index = VectorStoreIndex.from_documents(documents)
+
+# Create a retriever to fetch relevant documents
+retriever = index.as_retriever(retrieval_mode='similarity', k=3)
+
 model_kwargs = {
     "model": "chatgpt-4o-latest",
     "temperature": 1.2,
