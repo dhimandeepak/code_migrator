@@ -26,7 +26,7 @@ client = openai.AsyncClient()
 model_kwargs = {
     "model": "chatgpt-4o-latest",
     "temperature": 1.2,
-    "max_tokens": 500
+    "max_tokens": 1000
 }
 ENABLE_SYSTEM_PROMPT = True
 
