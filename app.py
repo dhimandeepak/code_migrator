@@ -1,17 +1,24 @@
 import chainlit as cl
 import openai
 import os
-import base64
+from dotenv import load_dotenv
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.core import Settings
+from llama_index.core.callbacks import CallbackManager
+from langfuse.llama_index import LlamaIndexCallbackHandler
+from prompts import SYSTEM_PROMPT
+#from langsmith.wrappers import wrap_openai
+#from langsmith import traceable
 
-# api_key = os.getenv("RUNPOD_API_KEY")
-# runpod_serverless_id = os.getenv("RUNPOD_SERVERLESS_ID")
+# Load environment variables
+load_dotenv()
 
-api_key=os.getenv("OPENAI_API_KEY")
-endpoint_url = "https://api.openai.com/v1"
+#langfuse_callback_handler = LlamaIndexCallbackHandler()
+#Settings.callback_manager = CallbackManager([langfuse_callback_handler])
 
-# endpoint_url = f"https://api.runpod.ai/v2/{runpod_serverless_id}/openai/v1"
 
-client = openai.AsyncClient(api_key=api_key, base_url=endpoint_url)
+client = openai.AsyncClient()
+#client = openai.AsyncClient(api_key=api_key, base_url=endpoint_url)
 
 # https://platform.openai.com/docs/models/gpt-4o
 model_kwargs = {
@@ -19,13 +26,17 @@ model_kwargs = {
     "temperature": 1.2,
     "max_tokens": 500
 }
-
-
+ENABLE_SYSTEM_PROMPT = True
 
 @cl.on_message
 async def on_message(message: cl.Message):
     # Maintain an array of messages in the user session
     message_history = cl.user_session.get("message_history", [])
+
+    if ENABLE_SYSTEM_PROMPT and (not message_history or message_history[0].get("role") != "system"):
+        system_prompt_content = SYSTEM_PROMPT
+        message_history.insert(0, {"role": "system", "content": system_prompt_content})
+
     message_history.append({"role": "user", "content": message.content})
 
     response_message = cl.Message(content="")
