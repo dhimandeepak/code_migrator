@@ -1,5 +1,7 @@
 import chainlit as cl
-import openai
+#import openai
+from langfuse.openai import openai
+from langfuse.decorators import observe
 import os
 from dotenv import load_dotenv
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
@@ -13,8 +15,8 @@ from prompts import SYSTEM_PROMPT
 # Load environment variables
 load_dotenv()
 
-#langfuse_callback_handler = LlamaIndexCallbackHandler()
-#Settings.callback_manager = CallbackManager([langfuse_callback_handler])
+langfuse_callback_handler = LlamaIndexCallbackHandler()
+Settings.callback_manager = CallbackManager([langfuse_callback_handler])
 
 
 client = openai.AsyncClient()
@@ -28,6 +30,7 @@ model_kwargs = {
 }
 ENABLE_SYSTEM_PROMPT = True
 
+observe()
 @cl.on_message
 async def on_message(message: cl.Message):
     # Maintain an array of messages in the user session
