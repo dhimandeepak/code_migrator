@@ -28,9 +28,9 @@ index = VectorStoreIndex.from_documents(documents)
 retriever = index.as_retriever(retrieval_mode='similarity', k=3)
 
 model_kwargs = {
-    "model": "chatgpt-4o-latest",
-    "temperature": 1.2,
-    "max_tokens": 1000
+    "model": "gpt-4o-mini",
+    "temperature": 0.2,
+    "max_tokens": 500
 }
 ENABLE_SYSTEM_PROMPT = True
 
@@ -44,8 +44,20 @@ async def on_message(message: cl.Message):
         system_prompt_content = SYSTEM_PROMPT
         message_history.insert(0, {"role": "system", "content": system_prompt_content})
 
+ 
+    # Retrieve relevant documents
+    relevant_docs = retriever.retrieve(message.content)
+
+    # Create a string of the relevant documents
+    relevant_docs_content = "\n".join([doc.node.get_content() for doc in relevant_docs])
+
+    message.content = relevant_docs_content + "\nUser Query: " + message.content
+
+
+
     message_history.append({"role": "user", "content": message.content})
 
+    
     response_message = cl.Message(content="")
     await response_message.send()
     
