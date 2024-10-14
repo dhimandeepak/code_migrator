@@ -50,8 +50,10 @@ tools = [
             "description": "Get the target version for migration",
             "parameters": {
                 "type": "object",
-                "properties": {},
-                "required": []
+                "properties": {
+                    "framework": {"type": "string"}
+                },
+                "required": ["framework"]
             }
         }
     },
@@ -126,7 +128,7 @@ async def execute_function(function_name, arguments):
     if function_name == "get_current_version":
         return get_current_version()
     elif function_name == "get_target_version":
-        return get_target_version()
+        return get_target_version(arguments["framework"])
     elif function_name == "get_migration_steps":
         return get_migration_steps(arguments["current_version"], arguments["target_version"])
     else:
