@@ -50,7 +50,7 @@ You are a highly advanced AI Code Migrator tasked with generating factual questi
 
 Instructions:
 
-- Generate **5** factual questions, each with a corresponding **expected_output**.
+- Generate **2** factual questions, each with a corresponding **expected_output**.
 - Ensure all questions are directly related to the document excerpt.
 - Present the output in the following structured JSON format:
 

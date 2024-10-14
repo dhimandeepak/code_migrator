@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 .chainlit
 chainlit.md
+
+qa_dataset.json
