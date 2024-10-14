@@ -81,6 +81,7 @@ model_kwargs = {
 ENABLE_SYSTEM_PROMPT = True
 
 def get_relevant_docs(message):
+    print("Getting relevant docs")
     # Retrieve relevant documents
     relevant_docs = retriever.retrieve(message.content)
     # Create a string of the relevant documents
@@ -90,6 +91,7 @@ def get_relevant_docs(message):
 
 @observe
 async def generate_response(client, message_history, gen_kwargs):
+    print("Generating response")
     response_message = cl.Message(content="")
     await response_message.send()
 
@@ -112,12 +114,15 @@ async def generate_response(client, message_history, gen_kwargs):
     if function_name:
         function_response = await execute_function(function_name, json.loads(function_arguments))
         message_history.append({"role": "function", "name": function_name, "content": function_response})
+        #send tools response back to LLM
+        #await response_message.stream_token(function_response)
         return await generate_response(client, message_history, gen_kwargs)
 
     await response_message.update()
     return response_message
 
 async def execute_function(function_name, arguments):
+    print("Executing function "+function_name)
     if function_name == "get_current_version":
         return get_current_version()
     elif function_name == "get_target_version":
@@ -131,6 +136,7 @@ async def execute_function(function_name, arguments):
 observe()
 @cl.on_message
 async def on_message(message: cl.Message):
+    print("Received message")
     # Maintain an array of messages in the user session
     message_history = cl.user_session.get("message_history", [])
  
