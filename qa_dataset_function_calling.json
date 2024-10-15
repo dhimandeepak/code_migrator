@@ -1,0 +1,1122 @@
+[
+  {
+    "question": "What is the focus of the Vert.x 4 migration guide?",
+    "expected_output": "The focus is on changes in HTTP and common components for migrating to Vert.x 4."
+  },
+  {
+    "question": "What type of changes does the migration guide address?",
+    "expected_output": "The migration guide addresses changes in HTTP and common components."
+  },
+  {
+    "question": "Is the migration guide intended for a specific version of Vert.x?",
+    "expected_output": "Yes, it is intended for migrating to Vert.x 4."
+  },
+  {
+    "question": "Where can the Vert.x 4 migration guide be found?",
+    "expected_output": "It can be found at https://vert-x3.github.io/vertx-4-migration-guide/index.html."
+  },
+  {
+    "question": "What is the purpose of the migration guide?",
+    "expected_output": "The purpose is to assist developers in upgrading their applications to Vert.x 4."
+  },
+  {
+    "question": "What is a significant change in Vert.x 4 regarding asynchronous operations?",
+    "expected_output": "Use future methods for asynchronous operations."
+  },
+  {
+    "question": "Which library is no longer a dependency in Vert.x 4?",
+    "expected_output": "The Jackson Databind library."
+  },
+  {
+    "question": "What type of changes are addressed in the section about 'Changes in EventBus'?",
+    "expected_output": "Changes related to the messaging system within Vert.x."
+  },
+  {
+    "question": "What has been removed from options classes in the migration to Vert.x 4?",
+    "expected_output": "The clustered flag."
+  },
+  {
+    "question": "What is one of the deprecated methods mentioned in the document?",
+    "expected_output": "Deprecated and removed authentication and authorization methods."
+  },
+  {
+    "question": "What significant change was made regarding pooled buffer methods in Vert.x?",
+    "expected_output": "The pooled buffer methods were removed."
+  },
+  {
+    "question": "What type of clients can now be created according to the document?",
+    "expected_output": "Clients that have no shared data sources."
+  },
+  {
+    "question": "Which testing framework has changes noted in the document?",
+    "expected_output": "JUnit5."
+  },
+  {
+    "question": "What programming language changes are mentioned in the document?",
+    "expected_output": "Kotlin changes."
+  },
+  {
+    "question": "What specific database code is mentioned for testing in the document?",
+    "expected_output": "Testing Mongo DB Code."
+  },
+  {
+    "question": "What is the main purpose of the Eclipse Vert.x 4 Migration Guide?",
+    "expected_output": "To provide information for upgrading Vert.x 3.x applications to Vert.x 4."
+  },
+  {
+    "question": "What types of features does the guide describe regarding the Vert.x 4 release?",
+    "expected_output": "The guide describes new, deprecated, and unsupported features in the Vert.x 4 release."
+  },
+  {
+    "question": "What should developers do to find relevant information based on their application's modules?",
+    "expected_output": "Developers should read the relevant section of the guide that corresponds to the modules used in their application."
+  },
+  {
+    "question": "What is the version of Vert.x that applications are being upgraded to according to the guide?",
+    "expected_output": "Applications are being upgraded to Vert.x 4."
+  },
+  {
+    "question": "Where can the Eclipse Vert.x 4 Migration Guide be accessed?",
+    "expected_output": "The guide can be accessed at https://vert-x3.github.io/vertx-4-migration-guide/index.html."
+  },
+  {
+    "question": "What is Vert.x primarily used for?",
+    "expected_output": "Creating reactive, non-blocking, and asynchronous applications that run on the Java Virtual Machine."
+  },
+  {
+    "question": "What type of applications can be created using Vert.x?",
+    "expected_output": "Applications with high volume of messages, large event processing, and HTTP interactions."
+  },
+  {
+    "question": "Is Vert.x designed to be cloud-native?",
+    "expected_output": "Yes, Vert.x is designed to be cloud-native."
+  },
+  {
+    "question": "What programming model does Vert.x support?",
+    "expected_output": "Asynchronous programming model."
+  },
+  {
+    "question": "Where can you find the migration guide for Vert.x?",
+    "expected_output": "At https://vert-x3.github.io/vertx-4-migration-guide/index.html."
+  },
+  {
+    "question": "What is the primary method used for asynchronous operations in Vert.x 4?",
+    "expected_output": "Futures are used for asynchronous operations in Vert.x 4."
+  },
+  {
+    "question": "How does error handling differ between callbacks and futures in Vert.x 4?",
+    "expected_output": "With futures, errors can be handled once at the end, whereas with callbacks, failures must be handled at every stage of composition."
+  },
+  {
+    "question": "Can developers still use callbacks for asynchronous operations in Vert.x 4?",
+    "expected_output": "Yes, developers can continue using callbacks for asynchronous operations in Vert.x 4."
+  },
+  {
+    "question": "What is the benefit of using futures over callbacks in Vert.x 4?",
+    "expected_output": "The benefit of using futures is improved error handling, allowing for a single failure handling point at the end of the operation."
+  },
+  {
+    "question": "What is the example provided in the document to illustrate the use of futures in Vert.x 4?",
+    "expected_output": "The example shows how to use a WebClient to send an HTTP request using futures, handling the response in a single completion handler."
+  },
+  {
+    "question": "Is the Jackson Databind library required in Vert.x 4 for JSON object mapping?",
+    "expected_output": "No, it is an optional Maven dependency that must be explicitly added if needed."
+  },
+  {
+    "question": "What should you do if your application uses a deprecated API in Vert.x 4?",
+    "expected_output": "You should update your application to use the new API provided in the latest version."
+  },
+  {
+    "question": "What method replaced the deprecated send method in Vert.x 4?",
+    "expected_output": "The request method replaced the deprecated send method."
+  },
+  {
+    "question": "How can you check for deprecated methods while migrating applications to Vert.x 4?",
+    "expected_output": "You can use the Java compiler to generate warnings for deprecated APIs."
+  },
+  {
+    "question": "What happens if you decide not to use object mapping of JSON in your project?",
+    "expected_output": "You can remove the Jackson Databind dependency and run your applications without it."
+  },
+  {
+    "question": "What is a significant breaking change in the WriteStream methods?",
+    "expected_output": "The WriteStream<T>.write() and WriteStream<T>.end() methods are no longer fluent."
+  },
+  {
+    "question": "What should developers use instead of MessageProducer<T>.send(T)?",
+    "expected_output": "Developers should use MessageProducer<T>.write(T) instead."
+  },
+  {
+    "question": "What interface does MessageConsumer extend?",
+    "expected_output": "MessageConsumer extends the ReadStream interface."
+  },
+  {
+    "question": "What methods have been removed from the EventBus?",
+    "expected_output": "The EventBus.send(\u2026 , Handler<AsyncResult<Message<T>>>) and Message.reply(\u2026 , Handler<AsyncResult<Message<T>>>) methods have been removed."
+  },
+  {
+    "question": "What is the recommended method for replying to a message in Vert.x 4?",
+    "expected_output": "The recommended method is Message.replyAndRequest(\u2026 , Handler<AsyncResult<Message<T>>>) instead of Message.reply(\u2026 , Handler<AsyncResult<Message<T>>>)"
+  },
+  {
+    "question": "What method has been removed in Vert.x 4 for setting a single handler on a future?",
+    "expected_output": "Future<T>.setHandler() method has been removed."
+  },
+  {
+    "question": "Which methods should be used instead of Future<T>.setHandler() in Vert.x 4?",
+    "expected_output": "Future<T>.onComplete(), Future<T>.onSuccess(), and Future<T>.onFailure() methods."
+  },
+  {
+    "question": "What change has been made regarding the Future.completer() method in Vert.x 4?",
+    "expected_output": "The Future.completer() method has been removed; Future<T> directly extends Handler<AsyncResult<T>>."
+  },
+  {
+    "question": "What method should be used instead of HttpClientRequest.connectionHandler() in Vert.x 4?",
+    "expected_output": "HttpClient.connectionHandler() method should be used instead."
+  },
+  {
+    "question": "How does the VerticleFactory.createVerticle() method behave differently in Vert.x 4 compared to earlier releases?",
+    "expected_output": "It asynchronously instantiates a verticle and returns a callback Callable<Verticle> instead of a single verticle instance."
+  },
+  {
+    "question": "What significant change was made to the VerticleFactory class in Vert.x 4?",
+    "expected_output": "The VerticleFactory class has been simplified and no longer requires initial resolution of an identifier, allowing for nested deployment to deploy the verticle."
+  },
+  {
+    "question": "What method should be used in Vert.x 4 to achieve functionality similar to multi-threaded worker verticle deployment?",
+    "expected_output": "The unordered Vertx.executeBlocking() method should be used to achieve similar functionality."
+  },
+  {
+    "question": "What does the Vertx.getOrCreateContext() method do in Vert.x 4 for non Vert.x threads?",
+    "expected_output": "It creates a single context for each non Vert.x thread, associating the thread with a context the first time a context is created."
+  },
+  {
+    "question": "What is the recommended way to update existing factories in Vert.x 4?",
+    "expected_output": "Existing factories should be updated to use a callable when a promise completes or fails."
+  },
+  {
+    "question": "What feature related to multi-threaded worker verticles has been removed in Vert.x 4?",
+    "expected_output": "The multi-threaded worker verticle deployment option has been removed."
+  },
+  {
+    "question": "What was inconsistent in the method names related to WebSocket in Vert.x?",
+    "expected_output": "The usage of the term WebSocket in method names was inconsistent, with incorrect capitalization, for example, Websocket instead of WebSocket."
+  },
+  {
+    "question": "Which class had methods removed that were related to WebSocket?",
+    "expected_output": "The HttpServerOptions class had methods removed that were related to WebSocket."
+  },
+  {
+    "question": "What data type is now used for WebSocket subprotocols in the new methods?",
+    "expected_output": "The new methods for WebSocket subprotocols use List<String> data type instead of a comma separated string."
+  },
+  {
+    "question": "What is the new method for getting the maximum WebSocket frame size?",
+    "expected_output": "The new method for getting the maximum WebSocket frame size is getMaxWebSocketFrameSize()."
+  },
+  {
+    "question": "What method replaces getTryUsePerMessageWebsocketCompression()?",
+    "expected_output": "The method that replaces getTryUsePerMessageWebsocketCompression() is getTryUsePerMessageWebSocketCompression()."
+  },
+  {
+    "question": "What method has replaced the synchronous HttpServerRequest.upgrade() method in Vert.x 4?",
+    "expected_output": "HttpServerRequest.toWebSocket()"
+  },
+  {
+    "question": "What is the default number of WebSocket connections set for each endpoint in Vert.x 4?",
+    "expected_output": "50"
+  },
+  {
+    "question": "Which exception has replaced WebsocketRejectedException in Vert.x 4?",
+    "expected_output": "UpgradeRejectedException"
+  },
+  {
+    "question": "What is the new method signature for handling WebSocket connections in Vert.x 4?",
+    "expected_output": "Future<WebSocket> fut = req.toWebSocket();"
+  },
+  {
+    "question": "How has the method for setting the maximum number of WebSocket connections changed from Vert.x 3.x to Vert.x 4?",
+    "expected_output": "In Vert.x 3.x, it was set using HttpClientOptions.maxPoolSize(), while in Vert.x 4, it is set using HttpClientOptions.maxWebSockets()."
+  },
+  {
+    "question": "What was the limitation of using HttpMethod as an enumerated data type in earlier releases of Vert.x?",
+    "expected_output": "It limited the extensibility of HTTP and prevented serving other HTTP methods directly."
+  },
+  {
+    "question": "What is the recommended way to handle HTTP methods in a switch block in Vert.x 4?",
+    "expected_output": "Use the method.name() to switch on the HTTP method names as strings."
+  },
+  {
+    "question": "What should you do if you were using HttpMethod.OTHER in your applications?",
+    "expected_output": "You should migrate to using HttpMethod.valueOf() with the specific HTTP method name."
+  },
+  {
+    "question": "What types of clients are available in Vert.x 4 for handling HTTP requests?",
+    "expected_output": "The available clients are the Vert.x web client and the Vert.x HTTP client."
+  },
+  {
+    "question": "How has the Vert.x HTTP client been updated in Vert.x 4?",
+    "expected_output": "The HTTP client has been updated and improved for better performance and functionality."
+  },
+  {
+    "question": "What is the main feature of the Vert.x web client introduced in version 3.4.0?",
+    "expected_output": "The web client provides simplified HTTP interactions and additional features such as HTTP session, JSON encoding and decoding, and response predicates."
+  },
+  {
+    "question": "What significant change was made to the HTTP client in Vert.x 4?",
+    "expected_output": "The HTTP client has been updated with simplified APIs, robust error handling, and support for connection reset for HTTP/1."
+  },
+  {
+    "question": "Which methods were removed from HttpClientRequest in Vert.x 4?",
+    "expected_output": "The methods get(), delete(), and put() have been removed."
+  },
+  {
+    "question": "How is an HttpClientRequest instance created in Vert.x?",
+    "expected_output": "An HttpClientRequest instance is created when a request or response is possible, such as when the client connects to the server or a connection is reused from the pool."
+  },
+  {
+    "question": "What should be used instead of the removed methods in HttpClientRequest for making requests?",
+    "expected_output": "Use the method HttpClientRequest> request(HttpMethod method, \u2026) instead."
+  },
+  {
+    "question": "What is the main improvement in error handling in Vert.x 4 compared to Vert.x 3?",
+    "expected_output": "Error handling is better in the new HTTP client, with improved future composition."
+  },
+  {
+    "question": "What should be ensured when using the HTTP client with futures in Vert.x 4?",
+    "expected_output": "Future composition should occur either on the event-loop or it should pause and resume the response."
+  },
+  {
+    "question": "What happens when the HttpClientResponse() method is called in Vert.x 4?",
+    "expected_output": "It starts emitting buffers as soon as it receives a response."
+  },
+  {
+    "question": "What is the expected status code to check for a successful response in the future composition example?",
+    "expected_output": "200."
+  },
+  {
+    "question": "What is the purpose of the exceptionHandler in the HttpClientRequest in Vert.x?",
+    "expected_output": "To handle connection errors or response errors."
+  },
+  {
+    "question": "What method in Vert.x 4 can be used to send a request and process the response?",
+    "expected_output": "The new send() method."
+  },
+  {
+    "question": "What does the body() method of HttpClientResponse return?",
+    "expected_output": "An asynchronous buffer."
+  },
+  {
+    "question": "Which method should be used instead of endHandler() in Vert.x 4?",
+    "expected_output": "The end() method."
+  },
+  {
+    "question": "What type of input can be passed to the send() method?",
+    "expected_output": "A buffer, a string, or a ReadStream."
+  },
+  {
+    "question": "What happens when the end() method is called on an HttpClientResponse?",
+    "expected_output": "It returns a future when a response is fully received successfully or failed and removes the response body."
+  },
+  {
+    "question": "What method is used to handle the end of a response in Vert.x?",
+    "expected_output": "end()"
+  },
+  {
+    "question": "What type of handler is now required for HttpClient methods in Vert.x 4?",
+    "expected_output": "Handler<AsyncResult<HttpClientResponse>>"
+  },
+  {
+    "question": "Which methods were removed in Vert.x 4 that were present in earlier releases?",
+    "expected_output": "getNow(), optionsNow(), and headNow()"
+  },
+  {
+    "question": "What is the purpose of the onSuccess() method in the context of HTTP requests?",
+    "expected_output": "It is used to handle successful HTTP requests."
+  },
+  {
+    "question": "What is the primary improvement in the HTTP client in Vert.x 4 compared to earlier versions?",
+    "expected_output": "The HTTP client methods now take asynchronous handlers as input arguments."
+  },
+  {
+    "question": "What method has been removed from the HttpClientRequest in Vert.x 4?",
+    "expected_output": "The HttpClientRequest.connectionHandler() method has been removed."
+  },
+  {
+    "question": "Which method should be used instead of the removed connection handler method in Vert.x 4?",
+    "expected_output": "Use the HttpClient.connectionHandler() method instead."
+  },
+  {
+    "question": "What is the purpose of the HttpClientResponse.netSocket() method in Vert.x 4?",
+    "expected_output": "It is used to create HTTP tunnels for the connection of the request."
+  },
+  {
+    "question": "What type of operations can be performed with the HttpClientRequest methods in Vert.x 4?",
+    "expected_output": "Operations include sending request headers, HTTP/2 specific operations, creating a NetSocket tunnel, and handling 100 continue headers manually."
+  },
+  {
+    "question": "How can you handle connection-related code in Vert.x 4?",
+    "expected_output": "By using the client.connectionHandler(conn -> { /* Connection related code */ }); method."
+  },
+  {
+    "question": "What new method has been introduced in the HttpClient class in Vert.x 4?",
+    "expected_output": "The new send() method."
+  },
+  {
+    "question": "What interface contains MultiMap methods in Vert.x 4?",
+    "expected_output": "HttpHeaders."
+  },
+  {
+    "question": "What was the status of the CaseInsensitiveHeaders class in Vert.x 4?",
+    "expected_output": "The CaseInsensitiveHeaders class is no longer public."
+  },
+  {
+    "question": "Which method should be used to create a multi-map implementation with case insensitive keys in Vert.x 4?",
+    "expected_output": "MultiMap.caseInsensitiveMultiMap() method."
+  },
+  {
+    "question": "How were MultiMap instances created in earlier releases of Vert.x compared to Vert.x 4?",
+    "expected_output": "In earlier releases, MultiMap instances were created using the CaseInsensitiveHeaders class, while in Vert.x 4, they are created using MultiMap methods."
+  },
+  {
+    "question": "What method is used to check the HTTP version on the server in Vert.x 4?",
+    "expected_output": "The HttpServerRequest.version() method."
+  },
+  {
+    "question": "Which new methods were introduced in the RequestOptions class in Vert.x 4?",
+    "expected_output": "Header, FollowRedirects, Timeout."
+  },
+  {
+    "question": "What should be used instead of NetServerOptions.isClientAuthRequired() in Vert.x 4?",
+    "expected_output": "Use the getClientAuth() method and check if it equals ClientAuth.REQUIRED."
+  },
+  {
+    "question": "What change was made to the NetSocket.upgradeToSsl() method in Vert.x 4?",
+    "expected_output": "It now uses Handler<AsyncResult> instead of Handler."
+  },
+  {
+    "question": "Which logging classes and methods have been deprecated in Vert.x 4?",
+    "expected_output": "The Logger and LoggerFactory classes along with their methods."
+  },
+  {
+    "question": "What version of RxJava is supported from Vert.x 4.1.0?",
+    "expected_output": "RxJava 3."
+  },
+  {
+    "question": "What package contains the new rxified API for RxJava 3 in Vert.x?",
+    "expected_output": "io.vertx.rxjava3."
+  },
+  {
+    "question": "Which method has been removed for retrieving configuration in Vert.x 4?",
+    "expected_output": "ConfigRetriever.getConfigAsFuture()."
+  },
+  {
+    "question": "What are the new callback methods to use instead of WriteStreamSubscriber.onComplete() in Vert.x 4?",
+    "expected_output": "WriteStreamSubscriber.onWriteStreamEnd() and WriteStreamSubscriber.onWriteStreamError()."
+  },
+  {
+    "question": "What change needs to be made in the pom.xml file to upgrade to RxJava 3?",
+    "expected_output": "Change the RxJava 1 and 2 bindings from vertx-rx-java or vertx-rx-java2 to vertx-rx-java3."
+  },
+  {
+    "question": "What methods have replaced Json.mapper() in Vert.x 4?",
+    "expected_output": "DatabindCodec.mapper()"
+  },
+  {
+    "question": "What is the new method for decoding a value from a Buffer using Jackson in Vert.x 4?",
+    "expected_output": "JacksonCodec.decodeValue(Buffer, TypeReference)"
+  },
+  {
+    "question": "What dependency is required for object mapping JSON in Vert.x 4?",
+    "expected_output": "You must explicitly add the com.fasterxml.jackson.core:jackson-databind dependency."
+  },
+  {
+    "question": "What change has been made regarding the ObjectMapper in Vert.x 4?",
+    "expected_output": "From Vert.x 4 onward, you cannot write a mapper instance; you should use your own static mapper or configure the Databind.mapper() instance."
+  },
+  {
+    "question": "Which method is used to encode an object in Vert.x 4?",
+    "expected_output": "Json.encode(Object)"
+  },
+  {
+    "question": "What are the main JSON types implemented in Vert.x according to the document?",
+    "expected_output": "JsonObject and JsonArray."
+  },
+  {
+    "question": "What configuration flag can be used in Vert.x 4 to continue using the Base64 encoder?",
+    "expected_output": "legacy."
+  },
+  {
+    "question": "What is the purpose of the utility methods {toBase64} and {toBase64Url}?",
+    "expected_output": "They enable only JSON migrations."
+  },
+  {
+    "question": "What has been fixed in Vert.x 4 regarding Base64 encoding?",
+    "expected_output": "The implementation now uses Base64URL instead of Base64 encoder."
+  },
+  {
+    "question": "What must be created to automatically map JSON objects to a Java POJO in applications?",
+    "expected_output": "A custom object mapper."
+  },
+  {
+    "question": "What method has been removed from TrustOptions?",
+    "expected_output": "The TrustOptions.toJSON method has been removed."
+  },
+  {
+    "question": "What change has been made regarding session handling in Vert.x 4?",
+    "expected_output": "The UserSessionHandler class has been removed and its functionality has been added to the SessionHandler class."
+  },
+  {
+    "question": "Which cookie interfaces have been removed in Vert.x 4?",
+    "expected_output": "The io.vertx.ext.web.Cookie and io.vertx.ext.web.handler.CookieHandler interfaces have been removed."
+  },
+  {
+    "question": "What must be passed to the create methods in FaviconHandler and ErrorHandler in Vert.x 4?",
+    "expected_output": "You must pass a Vertx instance object to the create methods."
+  },
+  {
+    "question": "How can you access the template engine in Vert.x 4?",
+    "expected_output": "Use the method TemplateEngine.unwrap() to access the template engine."
+  },
+  {
+    "question": "What method should be used instead of the deprecated HandlebarsTemplateEngine methods?",
+    "expected_output": "TemplateEngine.unwrap()"
+  },
+  {
+    "question": "Which interface has replaced the removed io.vertx.ext.web.Locale interface?",
+    "expected_output": "io.vertx.ext.web.LanguageHeader"
+  },
+  {
+    "question": "What method has replaced RoutingContext.acceptableLocales()?",
+    "expected_output": "RoutingContext.acceptableLanguages()"
+  },
+  {
+    "question": "What is the new return type of the Router.mountSubRouter() method in Vert.x 4?",
+    "expected_output": "Route"
+  },
+  {
+    "question": "What class should be used instead of the removed sockjs.BridgeOptions class?",
+    "expected_output": "sockjs.SockJSBridgeOptions"
+  },
+  {
+    "question": "What method has been deprecated for setting the authentication provider in SessionHandler?",
+    "expected_output": "SessionHandler.setAuthProvider(AuthProvider) method has been deprecated."
+  },
+  {
+    "question": "What is the new method for adding authentication providers in SessionHandler?",
+    "expected_output": "SessionHandler.addAuthProvider() method."
+  },
+  {
+    "question": "What constructor argument is required for the OAuth2Auth.create method starting from Vert.x 4?",
+    "expected_output": "The method requires 'Vertx vertx' as a constructor argument."
+  },
+  {
+    "question": "What is the purpose of the BodyHandler in Vert.x Web GraphQL from version 4 onward?",
+    "expected_output": "BodyHandler is required to process POST requests to prevent DDoS attacks."
+  },
+  {
+    "question": "How are TCP sent and received bytes recorded in Vert.x 4 compared to prior releases?",
+    "expected_output": "They are recorded as counters instead of distribution summaries."
+  },
+  {
+    "question": "What are the new names for the metrics that were previously called *_connections?",
+    "expected_output": "*_active_connections"
+  },
+  {
+    "question": "Which metrics have been renamed from *_bytesReceived?",
+    "expected_output": "*_bytes_read"
+  },
+  {
+    "question": "What is the new name for the metric *_requests?",
+    "expected_output": "*_active_requests"
+  },
+  {
+    "question": "What metric has replaced *_responseTime_seconds?",
+    "expected_output": "*_response_time_seconds"
+  },
+  {
+    "question": "What is the new name for the metric vertx_http_client_queue_delay_seconds?",
+    "expected_output": "vertx_http_client_queue_time_seconds"
+  },
+  {
+    "question": "What is the new module introduced in Vert.x 4 for developing contract-driven applications?",
+    "expected_output": "The new module is vertx-web-openapi."
+  },
+  {
+    "question": "Which dependencies are required for the vertx-web-openapi module?",
+    "expected_output": "The required dependencies are vertx-json-schema and vertx-web-validation."
+  },
+  {
+    "question": "What is the recommended action regarding the older OpenAPI module vertx-web-api-contract?",
+    "expected_output": "It is recommended to move to the new module vertx-web-openapi to take advantage of the new functionality."
+  },
+  {
+    "question": "What method is used to instantiate the RouterBuilder in the vertx-web-openapi module?",
+    "expected_output": "You can instantiate the RouterBuilder using RouterBuilder.create(vertx, 'petstore.yaml')."
+  },
+  {
+    "question": "How can old OpenAPI3RouterFactory methods be replaced in the new RouterBuilder?",
+    "expected_output": "Old methods can be replaced by using routerBuilder.operation('operationId').handler(handler) in the new RouterBuilder."
+  },
+  {
+    "question": "What method replaces 'routerFactory.mountOperationToEventBus' in the new RouterBuilder?",
+    "expected_output": "routerBuilder.operation('getPets').routeToEventBus('getpets.myapplication')"
+  },
+  {
+    "question": "Which method is used to handle security in the new Vert.x 4 framework?",
+    "expected_output": "routerBuilder.securityHandler()"
+  },
+  {
+    "question": "How do you set a validation failure handler in the new vertx-web-openapi module?",
+    "expected_output": "router.errorHandler(400, handler)"
+  },
+  {
+    "question": "What is no longer required for accessing the OpenAPI contract model in Vert.x 4?",
+    "expected_output": "The additional swagger-parser dependency."
+  },
+  {
+    "question": "Which module should be used to validate HTTP requests without OpenAPI in Vert.x 4?",
+    "expected_output": "vertx-web-validation module."
+  },
+  {
+    "question": "What modules are mentioned as being updated in the Vert.x web API service?",
+    "expected_output": "The vertx-web-api-service module and the vertx-web-validation module."
+  },
+  {
+    "question": "What class must be used to integrate the web service module with vertx-web-validation if OpenAPI is not used?",
+    "expected_output": "RouteToEBServiceHandler."
+  },
+  {
+    "question": "What is required when upgrading to Vert.x 4 regarding the vertx-web-api-service module?",
+    "expected_output": "You must migrate your Vert.x OpenAPI applications to the vertx-web-openapi module."
+  },
+  {
+    "question": "What functionality remains unchanged when using the vertx-web-openapi module?",
+    "expected_output": "The web service functionality."
+  },
+  {
+    "question": "What is the purpose of the ValidationHandlerBuilder in the provided code snippet?",
+    "expected_output": "To validate query parameters for the API endpoint."
+  },
+  {
+    "question": "What methods have been removed from the CircuitBreaker class in Vert.x?",
+    "expected_output": "CircuitBreaker.executeCommand() and CircuitBreaker.executeCommandWithFallback() have been removed."
+  },
+  {
+    "question": "What are the replacement methods for CircuitBreaker.executeCommand()?",
+    "expected_output": "CircuitBreaker.execute() is the replacement method."
+  },
+  {
+    "question": "What change has occurred regarding the Kubernetes service importer in Vert.x 4?",
+    "expected_output": "The Kubernetes service importer is no longer registered automatically and must be manually registered after creating the ServiceDiscovery instance."
+  },
+  {
+    "question": "What methods related to service discovery have been removed that contain ServiceDiscovery argument?",
+    "expected_output": "ServiceDiscovery.create(\u2026 , Handler<ServiceDiscovery> completionHandler) methods have been removed."
+  },
+  {
+    "question": "What is the return type of the ServiceDiscovery.registerServiceImporter() and ServiceDiscovery.registerServiceExporter() methods after the changes?",
+    "expected_output": "These methods now return Future<Void>."
+  },
+  {
+    "question": "What are the two new interfaces introduced in Vert.x 4 for authentication and authorization?",
+    "expected_output": "io.vertx.ext.auth.authentication.AuthenticationProvider and io.vertx.ext.auth.authorization.AuthorizationProvider."
+  },
+  {
+    "question": "How has the result of the authentication mechanism changed in Vert.x 4 compared to earlier releases?",
+    "expected_output": "In Vert.x 4, the result is a common implementation of io.vertx.ext.auth.User, whereas earlier releases returned a provider-specific User object."
+  },
+  {
+    "question": "What new feature regarding authorization was introduced in Vert.x 4?",
+    "expected_output": "In Vert.x 4, the User object instances are not associated with a particular authentication provider, allowing for separate authentication and authorization using different providers."
+  },
+  {
+    "question": "Can you authenticate a user using OAuth2 and perform authorization checks against a SQL database in Vert.x 4?",
+    "expected_output": "Yes, you can authenticate a user using OAuth2 and perform authorization checks against MongoDB or SQL database in Vert.x 4."
+  },
+  {
+    "question": "What is the significance of the change in how user authorization is handled in Vert.x 4?",
+    "expected_output": "The change allows for greater flexibility as the provider is no longer responsible for both authentication and authorization, enabling the use of different providers for each process."
+  },
+  {
+    "question": "What major change regarding authorization checks was introduced in Vert.x 4?",
+    "expected_output": "Vert.x 4 allows for authorization checks using different providers, including checks on roles, permissions, logic operations, and wildcards."
+  },
+  {
+    "question": "What is the key management change in Vert.x 4 compared to previous versions?",
+    "expected_output": "In Vert.x 4, there is no distinction between public buffer and private buffer when a key loads."
+  },
+  {
+    "question": "Which class is no longer available in Vert.x 4 for handling symmetric secrets?",
+    "expected_output": "The SecretOptions class is no longer available."
+  },
+  {
+    "question": "What should be used instead of the SecretOptions class in Vert.x 4?",
+    "expected_output": "The PubSecKeyOptions class should be used instead to work with a cryptographic key."
+  },
+  {
+    "question": "How should public and secret keys be configured in Vert.x 4 compared to Vert.x 3.x?",
+    "expected_output": "In Vert.x 4, keys are configured without the assumption of key-pairs and the key data does not require standard delimiters."
+  },
+  {
+    "question": "What must be specified in Vert.x 4 regarding key management?",
+    "expected_output": "Both the public and private key must be specified."
+  },
+  {
+    "question": "What is the recommended keystore format in Vert.x 4 instead of jceks?",
+    "expected_output": "Standard formats such as PKCS11 or PKCS12 are recommended."
+  },
+  {
+    "question": "In Vert.x 4, how can keystore entries manage passwords differently compared to Vert.x 3.x?",
+    "expected_output": "Each keystore entry can have a dedicated password, unlike Vert.x 3.x where all entries shared the same password."
+  },
+  {
+    "question": "What is the default keystore format assumed in Vert.x 4?",
+    "expected_output": "The default format is PKCS12 in Java 9 and above."
+  },
+  {
+    "question": "Which method has been removed in the authentication and authorization updates in Vert.x 4?",
+    "expected_output": "OAuth2Auth.createKeycloak() has been removed."
+  },
+  {
+    "question": "What is the new method to replace OAuth2Auth.create(Vertx, OAuth2FlowType)?",
+    "expected_output": "OAuth2Auth.create(vertx, new OAuth2ClientOptions().setFlow(YOUR_DESIRED_FLOW))"
+  },
+  {
+    "question": "What method replaces User.isAuthorised()?",
+    "expected_output": "User.isAuthorized()"
+  },
+  {
+    "question": "Which method has no replacing method for User.setAuthProvider()?",
+    "expected_output": "No replacing method"
+  },
+  {
+    "question": "What is the recommended replacement for OAuth2Auth.decodeToken()?",
+    "expected_output": "AuthProvider.authenticate()"
+  },
+  {
+    "question": "Which class should be used instead of AbstractUser?",
+    "expected_output": "Create user objects using the User.create(JsonObject) method."
+  },
+  {
+    "question": "What significant change occurred in Vert.x 4 regarding the gRPC compiler plugin?",
+    "expected_output": "The module protoc-gen-grpc-java is no longer available, and a new gRPC compiler plugin using the official gRPC compiler is introduced."
+  },
+  {
+    "question": "What was the main complexity associated with the previous gRPC compiler in earlier releases of Vert.x?",
+    "expected_output": "Working with the fork of the official gRPC compiler was complex."
+  },
+  {
+    "question": "How does the code generation differ between Vert.x 3.x and Vert.x 4?",
+    "expected_output": "In Vert.x 3.x, the generated code was written in the same source file, while in Vert.x 4, the generated code is not written in the same source file due to the new compiler's restrictions."
+  },
+  {
+    "question": "What must be added to the pom.xml file to work with the new gRPC plugin in Vert.x 4?",
+    "expected_output": "The new gRPC plugin details, including the official gRPC compiler and the Vert.x specific protoc plugin, must be added to the pom.xml file."
+  },
+  {
+    "question": "What is the purpose of the vertx-grpc-protoc-plugin in Vert.x 4?",
+    "expected_output": "The vertx-grpc-protoc-plugin is used to generate Vert.x specific code during the gRPC code generation process."
+  },
+  {
+    "question": "What class is generated in Vert.x 4 for gRPC APIs?",
+    "expected_output": "VertxGreeterGrpc"
+  },
+  {
+    "question": "In Vert.x 4, what do the gRPC APIs support that was not the case in previous versions?",
+    "expected_output": "Futures"
+  },
+  {
+    "question": "What type of object does the MqttWill data wrap in Vert.x 4?",
+    "expected_output": "An Vert.x buffer"
+  },
+  {
+    "question": "Which methods in MqttClient class return Future instead of being fluent in Vert.x 4?",
+    "expected_output": "MqttClient.connect(), MqttClient.disconnect(), MqttClient.publish()"
+  },
+  {
+    "question": "How does the implementation of the sayHello method change from Vert.x 3 to Vert.x 4?",
+    "expected_output": "In Vert.x 4, it returns Future<HelloReply> instead of using a Promise."
+  },
+  {
+    "question": "What methods have been removed from the MqttWill class?",
+    "expected_output": "MqttWill.willMessage(), MqttWill.willTopic(), MqttWill.willQos()"
+  },
+  {
+    "question": "What methods have replaced the removed MqttAuth methods?",
+    "expected_output": "MqttAuth.getUsername() replaces MqttAuth.username() and MqttAuth.getPassword() replaces MqttAuth.password()."
+  },
+  {
+    "question": "What is the new method for setting the keep-alive time in MqttClientOptions?",
+    "expected_output": "MqttClientOptions.setKeepAliveInterval() replaces MqttClientOptions.setKeepAliveTimeSeconds()."
+  },
+  {
+    "question": "Which class has been removed related to the service proxy?",
+    "expected_output": "The ServiceProxyProcessor class has been removed."
+  },
+  {
+    "question": "What dependency must be imported to use the service proxy code generator?",
+    "expected_output": "You must import vertx-codegen with processor classifier in your classpath."
+  },
+  {
+    "question": "What class should be used instead of AdminUtils for administrative operations on a Kafka cluster in Vert.x?",
+    "expected_output": "KafkaAdminClient."
+  },
+  {
+    "question": "What type of handler is now used in the flush methods of the KafkaProducer class?",
+    "expected_output": "Handler<AsyncResult<Void>>."
+  },
+  {
+    "question": "What significant change occurred in the Vert.x JDBC client starting from Vert.x 4?",
+    "expected_output": "The SQL common module has been merged into the JDBC client."
+  },
+  {
+    "question": "What new feature regarding connection management was introduced in Vert.x 4 for the JDBC client?",
+    "expected_output": "You can create a pool using the JDBC client APIs."
+  },
+  {
+    "question": "What is the recommended practice regarding the use of Vert.x 3.x APIs in Vert.x 4?",
+    "expected_output": "It is recommended to use the new JDBC client APIs in your applications."
+  },
+  {
+    "question": "What is the purpose of using Typesafe Config in Vert.x?",
+    "expected_output": "To avoid errors that may arise from using jsonConfig for configurations."
+  },
+  {
+    "question": "What must be included in the project to use Typesafe Config?",
+    "expected_output": "The agroal connection pool."
+  },
+  {
+    "question": "How does the connection management differ between Vert.x 3.x and 4.x?",
+    "expected_output": "In Vert.x 3.x, connections are managed using client.getConnection(), while in Vert.x 4.x, connections are managed using pool.getConnection()."
+  },
+  {
+    "question": "What is the maximum size of the connection pool configured in the example for Vert.x 4.x?",
+    "expected_output": "16."
+  },
+  {
+    "question": "What SQL query is used in the example for Vert.x 3.x?",
+    "expected_output": "SELECT * FROM user WHERE emp_id > ?."
+  },
+  {
+    "question": "What is the main improvement in Vert.x 4 regarding stored procedures compared to Vert.x 3?",
+    "expected_output": "In Vert.x 4, the pool is type safe and can handle the combination of IN and OUT arguments, as well as INOUT parameters."
+  },
+  {
+    "question": "How do you execute a query to select users in Vert.x 4?",
+    "expected_output": "You can execute a query using the pool's getConnection method and then calling conn.query().execute() with the appropriate SQL statement."
+  },
+  {
+    "question": "What is a key difference in handling connections between Vert.x 3 and Vert.x 4?",
+    "expected_output": "In Vert.x 4, you use preparedQuery for executing stored procedures, while in Vert.x 3, you use connection.callWithParams."
+  },
+  {
+    "question": "What should you remember to do after executing a query in Vert.x?",
+    "expected_output": "You should always remember to return the connection by calling conn.close() after executing the query."
+  },
+  {
+    "question": "What is the syntax for passing IN arguments in a stored procedure in Vert.x 4?",
+    "expected_output": "You use client.preparedQuery(\"{call new_customer(?, ?)}\").execute(Tuple.of(\"Paulo\", \"Lopes\")) to pass IN arguments."
+  },
+  {
+    "question": "What is the new way to specify the return type for OUT arguments in Vert.x 4 JDBC client?",
+    "expected_output": "You can specify its return type using database specific types instead of text constants for the type name."
+  },
+  {
+    "question": "What significant change was made to the MailAttachment in Vert.x 4?",
+    "expected_output": "MailAttachment is now available as an interface, enabling the use of mail attachment functionality in a stream."
+  },
+  {
+    "question": "How does the MailConfig interface relate to NetClientOptions in Vert.x 4?",
+    "expected_output": "The MailConfig interface extends the NetClientOptions interface, allowing mail configuration to support the proxy setting of the NetClient."
+  },
+  {
+    "question": "What methods were removed from the AMQP client in Vert.x 4?",
+    "expected_output": "Methods that contained AmqpMessage as an argument were removed, specifically those that had Handler<AmqpMessage>."
+  },
+  {
+    "question": "What is the new method signature for creating a receiver in the AMQP client in Vert.x 4?",
+    "expected_output": "The new method signature is AmqpClient.createReceiver(String address, Handler<AsyncResult<AmqpReceiver>> completionHandler)."
+  },
+  {
+    "question": "What method has replaced MongoClient.update() in the new MongoDB client?",
+    "expected_output": "MongoClient.updateCollection()"
+  },
+  {
+    "question": "Where can the EventBus JavaScript client module be accessed in Vert.x 4?",
+    "expected_output": "Only in npm."
+  },
+  {
+    "question": "What is the new location for the EventBus JavaScript client module in Vert.x 4?",
+    "expected_output": "https://unpkg.io/@vertx/eventbus-bridge-client.js@1.0.0/vertx-eventbus.js"
+  },
+  {
+    "question": "Which method has replaced MongoClient.removeOne()?",
+    "expected_output": "MongoClient.removeDocument()"
+  },
+  {
+    "question": "What is the purpose of the document excerpt?",
+    "expected_output": "To describe the changes in the Vert.x MongoDB client and EventBus JavaScript client."
+  },
+  {
+    "question": "What significant change occurred regarding the JavaScript client in Vert.x 4?",
+    "expected_output": "From Vert.x 4 onward, a new version of the JavaScript client will be available in npm only if there are changes in the client."
+  },
+  {
+    "question": "What class should be used to work with Redis client in Vert.x 4?",
+    "expected_output": "The Redis class should be used to work with Redis client in Vert.x 4."
+  },
+  {
+    "question": "What helper class is available to assist in migrating from RedisClient to the new Redis class?",
+    "expected_output": "The helper class RedisAPI is available to assist in migrating from RedisClient to the new Redis class."
+  },
+  {
+    "question": "What is one of the functionalities that the new Redis class supports?",
+    "expected_output": "The new Redis class supports connecting to high availability servers where Redis Sentinel is enabled."
+  },
+  {
+    "question": "What is the standard connection string syntax used to create a Redis client in Vert.x 4?",
+    "expected_output": "The standard connection string syntax is 'redis://server.address:port'."
+  },
+  {
+    "question": "What is the primary change in handling requests when migrating from Vert.x 3.x to 4.x?",
+    "expected_output": "In Vert.x 4.x, requests are handled using a typed API wrapped in a RedisAPI, and key-value pairs are set using a list instead of hard coding options."
+  },
+  {
+    "question": "What must be done after creating the Redis client in both Vert.x 3.x and 4.x?",
+    "expected_output": "You must update the applications to handle requests."
+  },
+  {
+    "question": "What performance improvement can be achieved by migrating to the new Redis client?",
+    "expected_output": "You may reduce a few conversions from helper class to new client, which might improve the performance of your application."
+  },
+  {
+    "question": "What command is referenced for more information on arguments available for setting key-value pairs?",
+    "expected_output": "The Redis SET command."
+  },
+  {
+    "question": "In the provided example for Vert.x 4.x, what method is used to set a key-value pair?",
+    "expected_output": "The method used is api.set() with a list of arguments."
+  },
+  {
+    "question": "What method is used for all interactions in Vert.x 4?",
+    "expected_output": "The send(Request) method."
+  },
+  {
+    "question": "What type does the new client response in Vert.x 4 use?",
+    "expected_output": "Response."
+  },
+  {
+    "question": "What exception is thrown when conversion to a particular type is not possible in the new client?",
+    "expected_output": "UnsupportedOperationException."
+  },
+  {
+    "question": "Which interface does the Response object implement to handle collections?",
+    "expected_output": "Iterable interface."
+  },
+  {
+    "question": "What are the types of responses in the older Vert.x client?",
+    "expected_output": "null, Long, String, JsonArray, JsonObject."
+  },
+  {
+    "question": "What term has been replaced in Redis roles and node options in Vert.x 4?",
+    "expected_output": "The term 'slave' has been replaced with 'replica'."
+  },
+  {
+    "question": "What is the new role used in Vert.x 4 for Redis client?",
+    "expected_output": "REPLICA."
+  },
+  {
+    "question": "Which driver version does the Vert.x Cassandra client use in Vert.x 4?",
+    "expected_output": "Datastax Java driver with version 4.x."
+  },
+  {
+    "question": "What must be done to migrate applications from Vert.x 3.x to Vert.x 4 regarding the Cassandra client?",
+    "expected_output": "You must import new Datastax driver classes and change the way you create statements."
+  },
+  {
+    "question": "What is the equivalent of RedisSlaves in Vert.x 4?",
+    "expected_output": "RedisReplicas."
+  },
+  {
+    "question": "What method should be used instead of CassandraClientOptions.setPort() in Vert.x 4?",
+    "expected_output": "CassandraClientOptions.addContactPoint() should be used instead."
+  },
+  {
+    "question": "What is the main reason object mappers are no longer supported in Vert.x 4?",
+    "expected_output": "Object mappers are no longer supported because of changes in Datastax Java driver 4.x."
+  },
+  {
+    "question": "Which class is used to create a Cassandra client in Vert.x?",
+    "expected_output": "CassandraClient is used to create a Cassandra client in Vert.x."
+  },
+  {
+    "question": "What changes were made to RabbitMQ options in Vert.x 4?",
+    "expected_output": "RabbitMQ options now inherit from NetClientOptions to leverage common connection options including SSL."
+  },
+  {
+    "question": "What is the purpose of the SimpleStatement class in the provided example?",
+    "expected_output": "The SimpleStatement class is used to create a CQL statement for executing queries against a Cassandra database."
+  },
+  {
+    "question": "What is the method used to set connection retries in Vert.x RabbitMQOptions 3.x?",
+    "expected_output": "setConnectionRetries"
+  },
+  {
+    "question": "What is the method used to set reconnect attempts in Vert.x RabbitMQOptions 4.x?",
+    "expected_output": "setReconnectAttempts"
+  },
+  {
+    "question": "What parameter is used to define the delay between connection retries in Vert.x RabbitMQOptions 3.x?",
+    "expected_output": "setConnectionRetryDelay"
+  },
+  {
+    "question": "What parameter is used to define the interval for reconnect attempts in Vert.x RabbitMQOptions 4.x?",
+    "expected_output": "setReconnectInterval"
+  },
+  {
+    "question": "What is the primary difference in naming conventions for connection retry settings between Vert.x RabbitMQOptions 3.x and 4.x?",
+    "expected_output": "In 3.x, it uses 'setConnectionRetries' and 'setConnectionRetryDelay', while in 4.x, it uses 'setReconnectAttempts' and 'setReconnectInterval'."
+  },
+  {
+    "question": "What has been removed from the VertxOptions and EventBusOptions classes?",
+    "expected_output": "The methods and boolean value that were used to specify, get, and set clustering."
+  },
+  {
+    "question": "What version of Hazelcast is the Hazelcast cluster manager based on in Vert.x 4?",
+    "expected_output": "Hazelcast 4."
+  },
+  {
+    "question": "What change must be made to the custom Infinispan configuration file when migrating from Vert.x 3.x?",
+    "expected_output": "Change the __vertx.subs cache type to replicated instead of distributed."
+  },
+  {
+    "question": "What is the impact of the changes in clustering on Vert.x applications?",
+    "expected_output": "The EventBus and SharedData APIs remain the same, so applications are not impacted."
+  },
+  {
+    "question": "What has been removed from the dependencies section of the build file when running an Vert.x cluster on Openshift?",
+    "expected_output": "The infinispan-cloud JAR."
+  },
+  {
+    "question": "What was the reason for changing the configuration in the project?",
+    "expected_output": "To reduce the transient dependencies introduced by the ignite-spring extension which was used to parse XML configurations."
+  },
+  {
+    "question": "What format can be used instead of ignite.xml for configuration?",
+    "expected_output": "ignite.json."
+  },
+  {
+    "question": "What happens if the cluster manager is used without any configuration changes?",
+    "expected_output": "No migration is required."
+  },
+  {
+    "question": "What dependency needs to be added back to use the old XML configuration format?",
+    "expected_output": "ignite-spring."
+  },
+  {
+    "question": "What options can be customized using the ignite.json format?",
+    "expected_output": "Ignite options, cache options, discovery options, and SSL options."
+  },
+  {
+    "question": "What is a key reason for not mixing Vert.x 3.x and Vert.x 4 nodes in a single cluster?",
+    "expected_output": "Major version upgrades in cluster managers prevent backward compatibility."
+  },
+  {
+    "question": "What has changed in Vert.x that affects the EventBus subscription data?",
+    "expected_output": "Vert.x has changed the format of the EventBus subscription data stored in cluster managers."
+  },
+  {
+    "question": "What should you do if you cannot migrate the entire Vert.x codebase at once?",
+    "expected_output": "Use the recommendations in the migration section to migrate an Vert.x 3.x codebase to Vert.x 4."
+  },
+  {
+    "question": "What is the cache mode set for the cache configuration named '__vertx.*'?",
+    "expected_output": "REPLICATED"
+  },
+  {
+    "question": "Which class is used for logging in the Ignite configuration for Vert.x?",
+    "expected_output": "io.vertx.spi.cluster.ignite.impl.VertxLogger"
+  },
+  {
+    "question": "What is the main purpose of splitting a Vert.x 3.x cluster?",
+    "expected_output": "To allow different teams to manage their applications independently, although separated components will lose clustering communication features."
+  },
+  {
+    "question": "What tool can be used if you cannot split your Vert.x cluster?",
+    "expected_output": "Vert.x EventBus Link."
+  },
+  {
+    "question": "What is a limitation mentioned regarding the migration of shared data API?",
+    "expected_output": "The migration of shared data API, such as maps, counters, and locks, is not supported."
+  },
+  {
+    "question": "What does the Vert.x EventBus Link create to facilitate communication between clusters?",
+    "expected_output": "A WebSocket server to receive messages and a WebSocket client to send them."
+  },
+  {
+    "question": "What are the message paradigms supported by the EventBusLink object?",
+    "expected_output": "Fire and forget, request and reply, and publish."
+  },
+  {
+    "question": "What class has been removed in Vert.x 4 that was previously used to start applications?",
+    "expected_output": "The Starter class has been removed."
+  },
+  {
+    "question": "Which Java version is now supported for isolated class loading in Vert.x 4?",
+    "expected_output": "Isolated class loading is supported for Java 8."
+  },
+  {
+    "question": "What methods have been removed from the Context class in Vert.x 4?",
+    "expected_output": "The methods Context.addCloseHook() and Context.removeCloseHook() have been removed."
+  },
+  {
+    "question": "What should be used instead of the removed methods KeyCertOptions.clone(), TrustOptions.clone(), and SSLEngineOptions.clone()?",
+    "expected_output": "Use the methods KeyCertOptions.copy(), TrustOptions.copy(), and SSLEngineOptions.copy() instead."
+  },
+  {
+    "question": "What new method should be used to check if file caching is enabled in Vert.x 4?",
+    "expected_output": "Use FileSystemOptions.isFileCachingEnabled() instead."
+  },
+  {
+    "question": "What must be called before any parameter that requires it for creation in Vert.x?",
+    "expected_output": "The Vertx parameter."
+  },
+  {
+    "question": "Which module supports only the vertx-core module?",
+    "expected_output": "vertx-junit5 module."
+  },
+  {
+    "question": "What are the new methods to use instead of the deprecated succeeding and failing methods in Vert.x?",
+    "expected_output": "VertxTestContext.succeedingThenComplete() and VertxTestContext.failingThenComplete() methods."
+  },
+  {
+    "question": "What is the alternative to the vertx-embedded-mongo-db module in Vert.x 4?",
+    "expected_output": "vertx-wiremongo."
+  },
+  {
+    "question": "What extension method is generated in Vert.x 3 for the get(Handler<AsyncResult<Result>>) method?",
+    "expected_output": "getAwait() extension method."
+  },
+  {
+    "question": "What is the purpose of the testFindApples method in the provided code?",
+    "expected_output": "To test the functionality of finding apples in a warehouse collection using WireMongo."
+  },
+  {
+    "question": "What type of object is expected to be returned from the wiremongo.find() method?",
+    "expected_output": "A List of JsonObject instances representing the found documents."
+  },
+  {
+    "question": "What does the query in the testFindApples method check for?",
+    "expected_output": "It checks for documents where the 'type' field equals 'apple'."
+  },
+  {
+    "question": "What is the significance of the expiration field in the JsonObject?",
+    "expected_output": "It indicates the expiration date of the apple, set to 7 days from the current time."
+  },
+  {
+    "question": "What assertion is made about the size of the list returned by db.findApples()?",
+    "expected_output": "It asserts that the size of the list is 1, indicating one apple was found."
+  }
+]
